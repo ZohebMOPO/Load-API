@@ -48,7 +48,7 @@ public class LoadController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    @PutMapping("/load/{shipperId}")
+    @PutMapping("/load/{id}")
     public ResponseEntity<Load> updateLoad(@PathVariable("id") long id, @RequestBody Load load){
         Optional<Load> loadData = loadRepository.findById(id);
 
